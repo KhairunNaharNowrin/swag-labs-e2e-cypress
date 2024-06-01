@@ -68,7 +68,6 @@ module.exports = {
     /pageObjects
       - loginPage.js
       - productPage.js
-      - cartPage.js
       - checkoutPage.js
 
 ```
