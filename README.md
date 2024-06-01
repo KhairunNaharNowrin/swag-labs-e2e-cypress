@@ -41,5 +41,18 @@ To get started with the Cypress tests, follow these steps:
     ```bash
     npx cypress open
     ```
+5. Project Setup: Disabling watchForFileChanges: false , in cypress.confiq.js improves performance and control by preventing automatic reloading of application files during test runs.
+
+ ```bash  
+module.exports = {
+  e2e: {
+    watchForFileChanges: false,
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+
+    },
+  },
+};
+```
 
 
