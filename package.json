@@ -1,0 +1,15 @@
+{
+  "name": "swag-labs-e2e-cypress",
+  "version": "1.0.0",
+  "description": "This repository contains end-to-end (E2E) test automation scripts using Cypress for the Swag Labs application. The test suite covers key user interactions and scenarios to ensure the reliability and functionality of the platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.10.0"
+  }
+}
