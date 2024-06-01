@@ -71,4 +71,42 @@ module.exports = {
       - checkoutPage.js
 
 ```
+## Generating Detailed Reports with Plugins
+
+**Install the Plugin::**
+
+```bash  
+npm install --save-dev cypress-mochawesome-reporter
+```
+**Update Cypress Configuration:**
+Update cypress.config.js to include the reporter configuration.
+
+```bash 
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: true,
+      json: true,
+    },
+  },
+});
+```
+**Create a Report After Running Tests:**
+
+```bash 
+npx cypress run
+```
+**View the Report:**
+
+1. The report will be saved in the cypress/reports directory.
+2. Open the generated HTML file in a browser to view the detailed report.
+
 
