@@ -55,4 +55,18 @@ module.exports = {
 };
 ```
 
+##Project Page Object Model (POM) pattern:
+
+/cypress
+  /integration
+    /e2e
+      - customerPurchasesProducts.spec.js
+      - customerSortsProductItems.spec.js
+      - userLockedOut.spec.js
+  /support
+    /pageObjects
+      - loginPage.js
+      - productPage.js
+      - cartPage.js
+      - checkoutPage.js
 
