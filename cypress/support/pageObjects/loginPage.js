@@ -1,51 +1,51 @@
 class loginPage {
 
-    get userNameField() {
-        return cy.get('[data-test="username"]')
-    }
+  get userNameField() {
+    return cy.get('[data-test="username"]')
+  }
 
-    get passwordFiled() {
-        return cy.get('[data-test="password"]')
-    }
+  get passwordFiled() {
+    return cy.get('[data-test="password"]')
+  }
 
-    get loginButton() {
-        return cy.get('[data-test="login-button"]');
-    }
+  get loginButton() {
+    return cy.get('[data-test="login-button"]');
+  }
 
-    get errorMessage() {
-        return cy.get('[data-test="error"]')
-    }
+  get errorMessage() {
+    return cy.get('[data-test="error"]')
+  }
 
-    visit() {
-        cy.visit('/'); 
-    }
+  visit() {
+    cy.visit('/');
+  }
 
-    enterUsername(username) {
-        this.userNameField.type(username).wait(200);
-      }
-    
-      enterPassword(password) {
-        this.passwordFiled.type(password).wait(200);
-      }
+  enterUsername(username) {
+    this.userNameField.type(username).wait(200);
+  }
 
-      clickLogin() {
-        this.loginButton.click();
-      }
+  enterPassword(password) {
+    this.passwordFiled.type(password).wait(200);
+  }
 
-    login(username, password) {
-        this.visit();      
-        this.enterUsername(username);
-        this.enterPassword(password);
-        this.clickLogin();
-    }
+  clickLogin() {
+    this.loginButton.click();
+  }
 
-    verifyLoginSuccess(redirectUrl) {
-        cy.url().should('include', redirectUrl);
-      }
+  login(username, password) {
+    this.visit();
+    this.enterUsername(username);
+    this.enterPassword(password);
+    this.clickLogin();
+  }
 
-    verifyLoginFailed() {
-        this.errorMessage.should('be.visible');
-      }
+  verifyLoginSuccess(redirectUrl) {
+    cy.url().should('include', redirectUrl);
+  }
+
+  verifyLoginFailed() {
+    this.errorMessage.should('be.visible');
+  }
 
 }
 

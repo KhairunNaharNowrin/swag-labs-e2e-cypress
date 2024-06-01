@@ -17,10 +17,11 @@ describe('Test Customer purchases products', () => {
 
   beforeEach(() => {
     loginPage.login(username, password);
-      loginPage.verifyLoginSuccess(redirectUrl);
+    loginPage.verifyLoginSuccess(redirectUrl);
   });
 
-   it('When the customer adds multiple products to the shopping cart , And proceeds to checkout the purchase, Then purchase is successful', () => {
+
+  it('When the customer adds multiple products to the shopping cart , And proceeds to checkout the purchase, Then purchase is successful', () => {
     productPage.addProductSauceLabsBackpack.click();
     productPage.verifyCartCount('1');
     productPage.addProductSauceLabsBikeLight.click();
@@ -36,7 +37,7 @@ describe('Test Customer purchases products', () => {
     checkoutPage.continueButton.click();
     checkoutPage.finishButton.scrollIntoView().click();
     checkoutPage.orderSuccessMessage.should('be.visible');
- });
+  });
 
 
 

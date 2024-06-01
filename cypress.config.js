@@ -8,7 +8,14 @@ module.exports = defineConfig({
     password: 'secret_sauce',
     watchForFileChanges: false,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: true,
+      json: true,
     },
   },
 });

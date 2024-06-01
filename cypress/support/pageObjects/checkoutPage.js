@@ -1,29 +1,29 @@
 class checkOutInfoPage {
 
-get firstName() {
+  get firstName() {
     return cy.get('[data-test="firstName"]');
-}
+  }
 
-get secondName() {
+  get secondName() {
     return cy.get('[data-test="lastName"]');
-}
+  }
 
-get zipcode() {
+  get zipcode() {
     return cy.get('[data-test="postalCode"]');
-}
+  }
 
-get continueButton() {
+  get continueButton() {
     return cy.get('[data-test="continue"]');
-}
+  }
 
-get finishButton() {
+  get finishButton() {
     return cy.get('[data-test="finish"]');
-}
+  }
 
-get orderSuccessMessage() {
+  get orderSuccessMessage() {
     return cy.get('[data-test="checkout-complete-container"]');
-}
-enterFirstname(firstName) {
+  }
+  enterFirstname(firstName) {
     this.firstName.type(firstName).wait(200);
   }
 
@@ -40,7 +40,7 @@ enterFirstname(firstName) {
     this.enterFirstname(firstName);
     this.enterSecondtname(secondName);
     this.enterzipcode(zipCode);
-    
+
   }
 
 }
