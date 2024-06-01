@@ -26,16 +26,20 @@ To get started with the Cypress tests, follow these steps:
 
 1. Clone the repository:
     ```bash
+    cd swag-labs-e2e-cypress
     git clone git@github.com:KhairunNaharNowrin/swag-labs-e2e-cypress.git
     ```
 2. Install the dependencies:
     ```bash
-    cd swag-labs-e2e-cypress
-    npm install
+    npm init -y   
     ```
-3. Run the Cypress tests:
+3. Install the Cypress:
     ```bash
-    npm run cypress:open
+    npm install cypress --save-dev
+    ```
+4. Run the Cypress tests:
+    ```bash
+    npx cypress open
     ```
 
 
