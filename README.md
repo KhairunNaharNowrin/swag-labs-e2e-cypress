@@ -57,6 +57,7 @@ module.exports = {
 
 ##Project Page Object Model (POM) pattern:
 
+```bash  
 /cypress
   /integration
     /e2e
@@ -69,4 +70,6 @@ module.exports = {
       - productPage.js
       - cartPage.js
       - checkoutPage.js
+
+```
 
